@@ -111,7 +111,7 @@ import assets from './assets.js'
         const template = `
         <form action="#">
             <h3>Вопрос:</h3>
-            <p>${question}</p>
+            <pre class="language-js"><code>${question.slice(1)}</code></pre>
 
             <h3>Варианты ответов:</h3>
             ${answers.reduce((html, item) => html += `<label><input type="radio" name="answer" value="${item}">${item}</label><br>`, '')}
@@ -128,6 +128,11 @@ import assets from './assets.js'
 
         // помещаем шаблон в контейнер
         div.innerHTML = template
+
+        // находим HTML-элемент с кодом и раскрашиваем js-код
+        let code = document.getElementsByTagName('code')[0];
+        window.Prism.highlightElement(code);
+
 
         // находим форму
         const form = div.querySelector('form')

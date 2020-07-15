@@ -48,11 +48,6 @@ form {
     text-align: left;
 }
 
-form p {
-    text-align: left;
-    white-space: pre;
-}
-
 form button {
     position: relative;
     left: 50%;
