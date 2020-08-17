@@ -142,7 +142,7 @@ const createGame = array => {
             <div>
                 <p>Правильных ответов: <span class="right">${rightAnswers}</span></p>
                 <p>Неправильных ответов: <span class="wrong">${wrongAnswers}</span></p>
-                <p>Процент правильных ответов: ${percent}</p>
+                <p>Процент правильных ответов: ${per}</p>
                 <p>${result}</p>
             </div>
         `
